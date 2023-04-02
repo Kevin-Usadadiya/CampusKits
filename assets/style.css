@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+
+.navbar{
+    box-shadow: 0 8px 6px -6px grey;
+    font-family: 'Source Sans Pro', sans-serif;
+ 
+}
+
+.nav-link{
+    color: #1A4649;
+    
+    letter-spacing: 1px;
+
+}
+
+.navbar-toggler{
+  border: 2px solid  #1A4649;
+  color: #F4B554;
+  
+}
+
+
+  .login a:nth-child(2) {
+    display: none; 
+  }
+  
+  .login:hover a:nth-child(1) {
+    display: none;
+  }
+  
+  .login:hover a:nth-child(2) {
+    display: block;
+  }
+
+  .login-btn{
+    background-color: #1A4649;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width:484px) {
+    .navbar-brand{
+      display: none;
+    }
+    .mid img{
+      padding: 10px;
+      width: 160px;
+    }
+    
+  }
+  @media screen and (min-width:992px) {
+    .mid, .btn, .form-search{
+        display: none;
+    }
+    
+  }
+  @media screen and (max-width:992px) {
+    .login, .right{
+        display: none;
+    }
+
+    .offcanvas-body{
+      display: flex;
+      justify-content: flex-start!important;
+      padding-left: 40px;
+    }
+    
+    
+    
+  }
