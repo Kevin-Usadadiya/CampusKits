@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Source+Sans+Pro:wght@700&display=swap');
 
 
 :root {
@@ -11,6 +12,7 @@
   --thumb: #edf2f4;
 }
 
+/*==================================== Navigation Bar =========================================*/
 .navbar{
     box-shadow: 0 8px 6px -6px grey;
     font-family: 'Source Sans Pro', sans-serif;
@@ -57,13 +59,43 @@
     background-color: #1A4649;
   }
 
+  @media screen and (max-width:484px) {
+    .navbar-brand{
+      display: none;
+    }
+    .mid img{
+      padding: 10px;
+      width: 160px;
+    }
+    
+  }
+  @media screen and (min-width:992px) {
+    .mid, .login-btn,.form-search, .search-img{
+        display: none;
+    }
+    
+  }
+  @media screen and (max-width:992px) {
+    .login, .right, .search{
+        display: none;
+    }
+
+    .offcanvas-body{
+      display: flex;
+      justify-content: flex-start!important;
+      padding-left: 40px;
+    }
+  
+  }
+
+
+  /*============================== Browse by Category ===================================*/
 
   .categories{
     margin-top: 150px;
   }
   .categories h3{
-    font-family: 'Source Sans Pro', sans-serif;
-    
+    font-family: 'Source Sans Pro', sans-serif; 
   }
 
   .cards {
@@ -155,49 +187,97 @@
   }
   
 
+/* ========================================== Our Products ======================================== */
 
+.our_products h3{
+  font-family: 'Source Sans Pro', sans-serif; 
+}
 
+#heart1,#heart2,#heart3,#heart4 {
+  color: grey;  
+  font-size: 25px;
+}
 
+#heart1.red, #heart2.red,#heart3.red,#heart4.red {
+  transition: all 300ms ease-in;
+  color: red;
+}
 
+.our_products_cards_container{
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.our_products_card{
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  padding: 25px 25px 0px 25px;
+  margin: 10px 15px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+}
 
+.our_products_header{
+  justify-content: space-between;
+}
 
+.our_products_header > button{
+  font-family: 'Source Sans Pro', sans-serif; 
+  color: whitesmoke;
+  background-color: #FF3131;
+  border-radius: 20px;
+}
 
+.our_products_header > button:hover{
+  color: #FF3131;
+  background-color: var(--white);
+}
 
+.our_products_card_img{
+  justify-content: center;
+}
+.our_products_card_img > a > img{
+  width: 200px;
+  height: 200px;
+  margin: 25px 10px;
+}
 
+.our_products_card_img:hover{
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: all 0.4s;
+}
 
+.our_products_card_details{
+  color: var(--greenish);
+  font-family: 'Inter', sans-serif;
+}
 
-
-
-
-
-
-  @media screen and (max-width:484px) {
-    .navbar-brand{
-      display: none;
-    }
-    .mid img{
-      padding: 10px;
-      width: 160px;
-    }
-    
-  }
-  @media screen and (min-width:992px) {
-    .mid, .login-btn,.form-search, .search-img{
-        display: none;
-    }
-    
-  }
-  @media screen and (max-width:992px) {
-    .login, .right, .search{
-        display: none;
-    }
-
-    .offcanvas-body{
-      display: flex;
-      justify-content: flex-start!important;
-      padding-left: 40px;
-    }
-    
-    
-    
-  }
+.our_products_card_details > div >  .button_1{
+  display: inline-block;
+    border-radius: 25px;
+    padding: 8px 15px;
+   background-color: #ADD8E6;
+   color: darkblue;
+}
+.our_products_card_details > div >  .button_2{
+  display: inline-block;
+    border-radius: 25px;
+    padding: 8px 15px;
+   background-color: 	#fffdaf;
+   color: var(--greenish);
+}
+.our_products_card_details > div >  .button_3{
+  display: inline-block;
+    border-radius: 25px;
+    padding: 8px 15px;
+   background-color: #cdffcd;
+   color: darkblue;
+}
+.our_products_card_details > div >  .button_4{
+   display: inline-block;
+    border-radius: 25px;
+   background-color: #F3CFC6;
+   color: var(--greenish);
+}
