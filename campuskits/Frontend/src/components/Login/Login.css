@@ -1,0 +1,53 @@
+/* ==========================================Login Page======================================== */
+#login_info{
+    margin-top: 50px;
+    width: 500px;
+    height: 100%;
+    margin: auto;
+  }
+  
+  #login_form{
+    margin-top: 50px;
+  }
+  
+  
+  #login_button{
+    background-color: #1A4649;
+    font-size: 1.2em;
+    margin: 7px 0px;
+    border: 3px solid #F4B554;
+    border-radius: 20px;
+  }
+  
+  #sign_up_button{
+    background-color: #F4B554;
+    border: 3px solid #1A4649;
+    color: #1A4649;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 17px 0px;
+    padding: 8px;
+    border-radius: 25px;
+  }
+  #login_page_image_section{
+  
+    width: 50%;
+    
+    display: flex;
+    justify-content: center;
+    background-color: #5e17eb52;
+  
+  }
+  
+  #login_page_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (max-width:1200px) {
+    #login_page_image_section{
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,20 @@
+{
+    "category" : [
+        {"title" : "Featured", "image" : "https://cdn-icons-png.flaticon.com/512/6978/6978350.png"},
+        {"title" : "Arduino", "image" : "https://cdn-icons-png.flaticon.com/512/4862/4862018.png"},
+        {"title" : "IOT", "image" : "https://cdn-icons-png.flaticon.com/512/2808/2808331.png"},
+        {"title" : "Connectors", "image" : "https://cdn-icons-png.flaticon.com/512/3569/3569966.png"},
+        {"title" : "Cables and Wires", "image" : "https://cdn-icons-png.flaticon.com/512/4152/4152061.png"},
+        {"title" : "Resistors", "image" : "https://cdn-icons-png.flaticon.com/512/1482/1482822.png"},
+        {"title" : "Capacitors", "image" : "https://cdn-icons-png.flaticon.com/512/778/778677.png"}
+    ],
+    "products" : [
+        {"offer" : "20% OFF", "image" : "https://i.ibb.co/FsmLfRs/Arduino-Uno-R3-removebg-preview.png", "name" : "Arduino", "label": "IOT🌩️", "price" : "20"},
+
+        {"offer" : "10% OFF", "image" : "https://i.ibb.co/1sgSLth/sensors-removebg-preview.png", "name" : "Sensors Kit", "label": "Sensors", "price" : "20"},
+
+        {"offer" : " ", "image" : "https://i.ibb.co/KrgbDXT/bcddisplay-removebg-preview.png", "name" : "7 Segment Display", "label": "Featured✨", "price" : "20"},
+        
+        {"offer" : " ", "image" : "https://i.ibb.co/wY3DtYd/cable-and-wires-removebg-preview.png", "name" : "Connectors", "label": "Cables & Wires🔌", "price" : "20"}
+    ]
+}

@@ -1,96 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Source+Sans+Pro:wght@700&display=swap');
+/*============================== Browse by Category ===================================*/
 
-
-:root {
-  --red: #ef233c;
-  --mustard: #F4B554;
-  --platinum: #e5e5e5;
-  --black: #2b2d42;
-  --white: #fff;
-  --greenish:#1A4649 ;
-  --thumb: #edf2f4;
-}
-
-/*==================================== Navigation Bar =========================================*/
-.navbar{
-    box-shadow: 0 8px 6px -6px grey;
-    font-family: 'Source Sans Pro', sans-serif;
- 
-}
-
-.nav-link{
-    color: #1A4649; 
-    letter-spacing: 1px;
-    font-family: 'Source Sans Pro', sans-serif;
-
-}
-
-.navbar-toggler{
-  border: 2px solid  #1A4649;
-  color: #F4B554;
-  
-}
-
-.form-control:focus {
-  border-color: #F4B554;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #F4B554 ;
-}
-
-.search  span{
-  color: #1A4649;
-  letter-spacing: 1px;
-
-}
-
-  .login a:nth-child(2) {
-    display: none; 
-  }
-  
-  .login:hover a:nth-child(1) {
-    display: none;
-  }
-  
-  .login:hover a:nth-child(2) {
-    display: block;
-  }
-
-  .login-btn{
-    background-color: #1A4649;
-  }
-
-  @media screen and (max-width:484px) {
-    .navbar-brand{
-      display: none;
-    }
-    .mid img{
-      padding: 10px;
-      width: 160px;
-    }
-    
-  }
-  @media screen and (min-width:992px) {
-    .mid, .login-btn,.form-search, .search-img{
-        display: none;
-    }
-    
-  }
-  @media screen and (max-width:992px) {
-    .login, .right, .search{
-        display: none;
-    }
-
-    .offcanvas-body{
-      display: flex;
-      justify-content: flex-start!important;
-      padding-left: 40px;
-    }
-  
-  }
-
-
-  /*============================== Browse by Category ===================================*/
-
-  .categories{
+.categories{
     margin-top: 150px;
   }
   .categories h3{
@@ -184,8 +94,8 @@
       margin-right: 40px;
     }
   }
-  
 
+  
 /* ========================================== Our Products ======================================== */
 
 .our_products h3{
@@ -193,7 +103,7 @@
 }
 
 #heart1,#heart2,#heart3,#heart4 {
-  color: grey;  
+  color: rgb(255, 255, 255);  
   font-size: 25px;
 }
 
@@ -214,11 +124,15 @@
   padding: 25px 25px 0px 25px;
   margin: 10px 15px;
   border-radius: 10px;
-  background-color: #f0f8ff;
+  /* background-color:  #d0e6f9; */
+  background-color:  var(--greenish);
+  background-color:  #f0f8ff;
+  /* background-color: #b8b3ff; */
+  
 }
 
 .our_products_header{
-  justify-content: space-between;
+  justify-content: space-between  ;
 }
 
 .our_products_header > button{
@@ -237,8 +151,8 @@
   justify-content: center;
 }
 .our_products_card_img > a > img{
-  width: 200px;
-  height: 200px;
+  /* width: 200px;
+  height: 200px; */
   margin: 25px 10px;
 }
 
@@ -250,39 +164,21 @@
 
 .our_products_card_details{
   color: var(--greenish);
+  /* color: white; */
   font-family: 'Inter', sans-serif;
 }
 
-.our_products_card_details > div >  .button_1{
+.label_button{
   display: inline-block;
     border-radius: 25px;
     padding: 8px 15px;
-   background-color: #ADD8E6;
-   color: darkblue;
-}
-.our_products_card_details > div >  .button_2{
-  display: inline-block;
-    border-radius: 25px;
-    padding: 8px 15px;
-   background-color: 	#fffdaf;
-   color: var(--greenish);
-}
-.our_products_card_details > div >  .button_3{
-  display: inline-block;
-    border-radius: 25px;
-    padding: 8px 15px;
-   background-color: #cdffcd;
-   color: darkblue;
-}
-.our_products_card_details > div >  .button_4{
-   display: inline-block;
-    border-radius: 25px;
-   background-color: #F3CFC6;
-   color: var(--greenish);
+   background-color: var(--greenish);
+   color: white;
 }
 
 
-@media screen and (max-width:400px) {
+
+/* @media screen and (max-width:400px) {
   #heart1,#heart2,#heart3,#heart4{
     font-size: 20px;
   }
@@ -308,4 +204,4 @@
     margin: 25px 10px;
   }
   
-}
+} */
