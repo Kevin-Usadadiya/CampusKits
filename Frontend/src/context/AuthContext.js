@@ -9,7 +9,7 @@ import {
     
 } from 'firebase/auth'
 
-import {auth} from "../components/Login/FirebaseConfig"
+import {auth} from "../components/Firebase/FirebaseConfig"
 
 const AuthContext = createContext()
 

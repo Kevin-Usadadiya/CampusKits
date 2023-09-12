@@ -1,16 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
 import { UserAuth } from '../../context/AuthContext';
 import './Navbar.css'
 
 
 export default function Navbar(props){
-
+    
     const { user, logOut } = UserAuth();
+
 
     const handleSignOut = async () => {
       try {
         await logOut()
+        
   
       } catch (error) {
         console.log(error)
@@ -38,19 +40,20 @@ export default function Navbar(props){
       </button>
 
 
-      <div className={`offcanvas offcanvas-end {props.toggle}`}  tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div className="offcanvas offcanvas-end " tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div className="offcanvas-header">
           
           <div className="offcanvas-title" id="offcanvasNavbarLabel">
             <img src="https://i.ibb.co/sbgPvxw/main.png" alt="CampusKits" width="70" height="70" className="mx-4"/> 
             <img src="https://i.ibb.co/BzRNTHw/centerlogo.pngg" alt="" width="150px"/>
           </div>
-          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
       </div>                    
         <div className="offcanvas-body  d-flex justify-content-center">
             <ul className="navbar-nav ">
                 <li className="nav-item px-3">
-                    <Link className="nav-link fw-bold" aria-current="page" to="/">Home</Link>
+                    <Link className="nav-link fw-bold" aria-current="page" to="/" >Home</Link>
+                      
                 </li>
                 <li className="nav-item px-3">
                     <Link className="nav-link fw-bold" to="/shop">Shop</Link>
@@ -91,9 +94,13 @@ export default function Navbar(props){
      
 
     <div className="login pt-1 px-4">
-        <Link to="/login"><img src="https://www.citypng.com/public/uploads/small/11641484336h6ddhislwsavlw3fq7vthp1pxmgj0cratxydxbhuhzs58ndik9hsxuyunrxqv5csxjhkukgltu7v7e2us0tbkieluxl1hks2uzt8.png" alt="" width="30px" height="30px"/></Link>
-
-        <Link to="/login"><img src="https://static.thenounproject.com/png/2448985-200.png"  alt=" "  width="30px" height="30px"/></Link>
+      {
+        user?.email? <Link onClick={handleSignOut}><img src="https://www.citypng.com/public/uploads/small/11641484336h6ddhislwsavlw3fq7vthp1pxmgj0cratxydxbhuhzs58ndik9hsxuyunrxqv5csxjhkukgltu7v7e2us0tbkieluxl1hks2uzt8.png" alt="" width="30px" height="30px"/></Link>:<>
+        
+        <Link to="/login"><img src="https://static.thenounproject.com/png/2448985-200.png"  alt=" "  width="30px" height="30px"/></Link></>
+        
+      }
+        
      </div>
       {/* <!-- <div className="right d-flex"> -->
         <!-- <button className="btn text-white px-3">

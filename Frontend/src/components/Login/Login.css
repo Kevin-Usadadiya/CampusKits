@@ -1,4 +1,7 @@
 /* ==========================================Login Page======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+
 #login_info{
     margin-top: 50px;
     width: 500px;
@@ -29,24 +32,57 @@
     padding: 8px;
     border-radius: 25px;
   }
-  #login_page_image_section{
-  
+  #login_page_image_section{ 
     width: 50%;
-    
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    background-color: #5e17eb52;
-  
+    background-color: #b8c6ff;
+    background-color: #123c76;
+    background-color: rgb(66, 133, 244);    
+    /* background-color: #0f5ac2; */
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Lora', serif;
+    
+   
   }
+  /* #login_page_image_section > h1{
+    margin-top: 4em;
+  } */
+  .login_page_side_description >h1{
+    line-height: 2em;
+  }
+  .login_page_side_description >h3{
+    line-height: 1em;
+  }
+  .login_page_side_description > p{
+    margin-top: 5em;
+    line-height: 0.3em;
+    font-size: 1.2em;
+    /* letter-spacing: 1px; */
+  }
+
+
+
   
   #login_page_image{
+    
+    width: 500px;
+    position: fixed;
+    margin-top: 8em;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+ 
   
   @media screen and (max-width:1200px) {
     #login_page_image_section{
+      display: none;
+    }
+    .login_header_image{
       display: none;
     }
   }

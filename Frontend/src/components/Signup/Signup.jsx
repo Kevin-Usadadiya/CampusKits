@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect ,useState} from 'react'
+import { useNavigate } from 'react-router-dom'
+import './Signup.css'
 
-import { GoogleButton } from "react-google-button";
-import { UserAuth } from "../../context/AuthContext";
+import { Link } from 'react-router-dom'
+import { UserAuth } from '../../context/AuthContext'
 
-import "./Login.css";
-
-function Login() {
+function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [setError] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('')
     try {
-      await login(email, password)
+
+      await signup(email, password)
       navigate('/')
     } catch (error) {
       setError(error.message)
@@ -23,26 +23,19 @@ function Login() {
     }
  
   };
-  // For Google Auth
 
-  const { googleSignIn, user, login } = UserAuth();
-  const navigate = useNavigate();
+    // For Google Auth
 
-  const handleGoogleSignIn = async () => {
-    try {
-      await googleSignIn();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const {user, signup} = UserAuth()
+  const navigate = useNavigate()
 
-  useEffect(() => {
-    if (user != null) {
-      navigate("/");
-    }
-  }, [user, navigate]); // On user change this effect will run
+
+  useEffect(()=>{
+      if(user != null){
+          navigate('/')
+      }
+  },[user,navigate]) // On user change this effect will run
   return (
-    <>
       <div className="d-flex flex-wrap mt-5">
         <div id="login_page_image_section">
           <div className="mt-5 pt-5 login_page_side_description" style={{position:"fixed"}} >
@@ -66,9 +59,9 @@ function Login() {
           </div>
           <div className="container mb-2">
             <h1 style={{ fontFamily: "source-code-pro", fontWeight: "bold" }}>
-              Log in
+             Sign in
             </h1>
-            <p className="w-75 ">Log in to continue</p>
+            <p className="w-75 ">Sign in to continue</p>
           </div>
 
           <div id="login_form container">
@@ -119,38 +112,23 @@ function Login() {
                   className="btn btn-primary w-50  mb-2"
                   id="login_button"
                 >
-                  Login
+                  Sign Up
                 </button>
               </div>
 
-              <hr />
-              <div className="d-flex flex-column justify-content-center align-items-center">
-                <p>Or Login With</p>
-                {/* Login With Google */}
-                <div>
-                  <GoogleButton
-                    onClick={handleGoogleSignIn}
-                    label="Google"
-                    style={{ width: "200px" }}
-                  />
-                </div>
-              </div>
+             
               <br />
             </form>
             <hr />
             <div className="d-flex justify-content-center">
-              <p>Don't have an account?</p>
+              <Link to="/login"><strong>Already have an account?</strong></Link>
             </div>
-            <div className="justify-content-center d-flex">
-              <Link to="/signup" className="btn  w-50" id="sign_up_button">
-                Sign Up
-              </Link>
-            </div>
+           
           </div>
         </div>
       </div>
-    </>
-  );
+
+  )
 }
 
-export default Login;
+export default Signup

@@ -2,9 +2,11 @@ import Home from './components/Home/Home'
 import Navbar from './components/Navbar/Navbar';
 import Shop from './components/Shop/Shop';
 import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
+import ScrolltoTop from '../src/components/ScrollToTop/ScrollToTop'
 import { AuthContextProvider } from './context/AuthContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react';
+
 
 function App() {
  
@@ -12,7 +14,7 @@ function App() {
     <>
       <BrowserRouter>
     <AuthContextProvider>
-     
+    <ScrolltoTop/>
 
         <Routes>
         
@@ -35,7 +37,15 @@ function App() {
 
           <Route exact path='/login' element={
             <>
+              <Navbar/>
               <Login/>
+            </>
+          }>
+        </Route>
+          <Route exact path='/signup' element={
+            <>
+              <Navbar/>
+              <Signup/>
             </>
           }>
         </Route>
