@@ -12,7 +12,7 @@ export default function Navbar(props){
     const handleSignOut = async () => {
       try {
         await logOut()
-        
+        alert("Logout Successfull")
   
       } catch (error) {
         console.log(error)
